@@ -37,43 +37,50 @@ int main( int ac, char **av){
 
 #### explication
 
-état de le méoire la la ligne 13 :
+__état de le méoire la la ligne 13 :__
 
-| adresse mémoire   |  data  | variable|
+on a mit dans les pointeurs \*pa et \*pb les adresse de a et b
+
+
+| adresse mémoire   |  data / adresse cible  | variable|
 | ------------ | ------------ | -----------|
 |  0xab001 | 42  | a |
 |  0xab002 | 100  | b |
-| 0xab003 | 0xab001 | pa |
-| 0xab004 | 0xab002 | pb |
+| 0xab003 | 0xab001 | \*pa |
+| 0xab004 | 0xab002 | \*pb |
 
-état de la mémoir a la ligne 15
 
-| adresse mémoire   |  data  | variable|
+
+__état de la mémoir a la ligne 15 :__
+
+on a mit dans la varaible tmp la valeur du pointeur \*pa
+
+| adresse mémoire   |  data / adresse cible  | variable|
 | ------------ | ------------ | -----------|
 |  0xab001 | 42  | a |
 |  0xab002 | 100  | b |
-| 0xab001 | 42 | pa |
-| 0xab002 | 100 | pb |
-| 0xab003 | 42 | tmp |
+| 0xab003 | 0xab001 | \*pa |
+| 0xab004 | 0xab002 | \*pb |
+| 0xab005 | 42 | tmp |
 
-état de la mémoir a la ligne 16 :
+__état de la mémoir a la ligne 16 :__
 
-| adresse mémoire   |  data  | variable|
+on a mit la valeur du pointeur \*pb dans l'adresse du pointeur \*pa
+
+| adresse mémoire   |  data / adresse cible  | variable|
 | ------------ | ------------ | -----------|
 |  0xab001 | 100  | a |
-|  0xab001 | 100  | b |
-| 0xab001 | 100 | pa |
-| 0xab001 | 100 | pb |
-| 0xab005 | 42 | tmp |
-
-état de la mémoir a la ligne 17 :
-
-| adresse mémoire   |  data  | variable|
-| ------------ | ------------ | -----------|
-|  0xab005 | 42  | a |
 |  0xab002 | 100  | b |
-| 0xab005 | 42 | pa |
-| 0xab002 | 100 | pb |
+| 0xab003 | 0xab001 | \*pa |
+| 0xab004 | 0xab002 | \*pb |
 | 0xab005 | 42 | tmp |
 
-	
+__état de la mémoir a la ligne 17 :__
+
+| adresse mémoire   |  data / adresse cible  | variable|
+| ------------ | ------------ | -----------|
+|  0xab001 | 42  | a |
+|  0xab002 | 100  | b |
+| 0xab005 | 0xab001 | \*pa |
+| 0xab002 | 0xab002 | \*pb |
+| 0xab005 | 42 | tmp |
