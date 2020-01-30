@@ -61,19 +61,19 @@ int main( int ac, char **av){
 | adresse mémoire   |  data  | variable|
 | ------------ | ------------ | -----------|
 |  0xab001 | 100  | a |
-|  0xab002 | 100  | b |
-| 0xab003 | 100 | pa |
-| 0xab004 | 100 | pb |
+|  0xab001 | 100  | b |
+| 0xab001 | 100 | pa |
+| 0xab001 | 100 | pb |
 | 0xab005 | 42 | tmp |
 
 état de la mémoir a la ligne 17 :
 
 | adresse mémoire   |  data  | variable|
 | ------------ | ------------ | -----------|
-|  0xab001 | 42  | a |
+|  0xab005 | 42  | a |
 |  0xab002 | 100  | b |
-| 0xab003 | 42 | pa |
-| 0xab004 | 100 | pb |
+| 0xab005 | 42 | pa |
+| 0xab002 | 100 | pb |
 | 0xab005 | 42 | tmp |
 
 	
