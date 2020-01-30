@@ -77,6 +77,8 @@ on a mit la valeur du pointeur \*pb dans l'adresse du pointeur \*pa
 
 __état de la mémoir a la ligne 17 :__
 
+on a mit la valeur de tmp dans l'adresse du poitneur \*pa
+
 | adresse mémoire   |  data / adresse cible  | variable|
 | ------------ | ------------ | -----------|
 |  0xab001 | 42  | a |
